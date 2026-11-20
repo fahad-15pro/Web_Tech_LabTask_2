@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Club Membership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e59c9;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+            padding: 20px;
+        }
+        .topnav {
+            background-color: #440202;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .topnav a:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .card {
+            width: 400px;
+            padding: 20px;
+            margin: 30px auto;
+            border: 15px solid #1473ef;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 4px 4px 8px gray;
+            position: relative;
+        }
+        .card > h2 {
+            color: green;
+            margin-top: 0;
+        }
+        .card p {
+            font-style: italic;
+        }
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .form-container {
+            width: 450px;
+            margin: 30px auto;
+        }
+        fieldset {
+            background-color: white;
+            border: 2px solid #1e3a5f;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        legend {
+            color: #1e3a5f;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .choice-label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: #10c248;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2c02c7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Programming Club</h1>
+    <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#join">Join</a>
+    </div>
+
+    <div class="card" id="home">
+
+        <h2>Welcome to Our computer Club!</h2>
+
+        <p>
+            this is the progamming club of our campus.
+        </p>
+
+        <h3> WE can do </h3>
+
+        <ul>
+            <li>Learn programming languages</li>
+            <li>Participate in cp</li>
+            <li>Build web twch projects</li>
+        </ul>
+    </div>
+
+    <div class="form-container" id="join">
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Join the Club</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname"
+                       required minlength="3">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="studentid">Student ID:</label>
+                <input type="text" id="studentid" name="studentid"
+                       placeholder="24-57981-2"
+                       pattern="[0-9]{2}-[0-9]{5}-[0-9]"
+                       title="Enter ID in the format 24-57981-2"
+                       required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age"
+                       min="17" max="40" required>
+
+                <label>Membership Type:</label>
+
+                <label class="choice-label">
+                    <input type="radio" id="general" name="membership"
+                           value="General" required>
+                    General
+                </label>
+
+                <label class="choice-label">
+                    <input type="radio" id="executive" name="membership"
+                           value="Executive" required>
+                    Executive
+                </label>
+
+                <label for="club">Preferred Club:</label>
+                <select id="club" name="club" required>
+                    <option value="">Select a club</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Astronomy">Astronomy</option>
+                </select>
+
+                <label for="reason">Why do you want to join?</label>
+                <textarea id="reason" name="reason"
+                          rows="4" maxlength="200"
+                          required></textarea>
+
+                <label class="choice-label">
+                    <input type="checkbox" id="rules" name="rules"
+                           value="Agreed" required>
+                    I agree to the club rules
+                </label>
+
+                <button type="submit">Join Now</button>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+</body>
+</html>
